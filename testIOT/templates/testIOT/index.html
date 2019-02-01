@@ -1,10 +1,8 @@
-{% if tempModel %}
+{% if beatData %}
     <h3>Here are all the data:</h3>
     <ul>
-        {% for temp in tempModel %}
-            <li>{{ temp.room }}</li>
-            <li>{{ temp.temperature_f }}</li>
-            <li>{{ temp.humidity }}</li>
+        {% for data in beatData %}
+            <li>{{ data.beat }}</li>
         {% endfor %}
     </ul>
 {% else %}
