@@ -18,6 +18,9 @@ def index(request):
     return HttpResponse("Working...") #HttpResponse('Connected')
     #return HttpResponse("Connected")
 
+def records(request):
+    return
+
 @csrf_exempt
 def post_data(request):
     if request.method == "POST":
@@ -56,11 +59,14 @@ def post_data(request):
 
         fig = Figure()
         ax = fig.add_subplot(111)
-        y = []
-        x = range(47)
+        #y = []
+        x = range(50)
 
-        for i in beatData:
-            y.append(i.beat)
+        #for i in beatData:
+            #y.append(i.beat)
+        print(Beat.objects.get(pk = 1))
+        data = Beat.objects.get(pk = 1)
+        y = data.beat.split(',')
 
         '''now = datetime.datetime.now()
         delta = datetime.timedelta(days=1)

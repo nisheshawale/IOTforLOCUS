@@ -20,5 +20,6 @@ from testIOT import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('testIOT/', views.post_data, name='post_data'),
-    path('index/', views.index, name = 'index')
+    path('index/', views.index, name = 'index'),
+    path('records/', views.records, name = 'records')
 ]
