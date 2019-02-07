@@ -20,3 +20,8 @@ class beatserializer(serializers.ModelSerializer):
         new_beat.save()
         return new_beat
 
+    def update(self, instance, validated_data):
+        instance.beat = validated_data.get('beat', instance.beat)
+
+        instance.save()
+        return instance

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="{% static 'testIOT/design.css' %}" rel="stylesheet">
+</head>
+<body>
+    <form action="/records/" method="post">
+        {% csrf_token %}
+         <div class="container">
+ <!---heading---->
+     <header class="heading"> Record-Form</header><hr></hr>
+	<!---Form starting---->
+	<div class="row ">
+	 <!--- For Name---->
+         <div class="col-sm-12">
+             <div class="row">
+			     <!--div class="col-xs-4">
+          	         <label class="firstname">First Name :</label> </div-->
+		         <div class="col-xs-8">
+		             <input type="text" name="first_name" id="first_name" placeholder="Enter First Name" class="form-control ">
+                 </div>
+		        </div>
+              </div>
+
+
+             <div class="col-sm-12">
+                 <div class="row">
+                     <!--div class="col-xs-4">
+                         <label class="lastname">Last Name :</label></div-->
+                    <div class ="col-xs-8">
+                         <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" class="form-control last">
+                    </div>
+                 </div>
+             </div>
+     <!-----For email---->
+             <div class="col-sm-12">
+                 <div class="row">
+                     <!--div class="col-xs-4">
+                         <label class="uniq" >ID</label></div-->
+                     <div class="col-xs-8"	>
+                          <input type="text" name="unique"  id="unique" placeholder="Enter ID" class="form-control" >
+                     </div>
+                 </div>
+             </div>
+	 <!-----For Password and confirm password---->
+          <div class="col-sm-12">
+		         <div class="row">
+				     <!--div class="col-xs-4">
+		 	              <label class="recommend">Recommendations</label></div-->
+                          <div class="col-xs-8">
+                                 <input type="textarea" name="recommendations" id="recommendations" placeholder="Enter recommendations" class="form-control">
+                         </div>
+                      </div>
+                  </div>
+
+     <!-----------For Phone number-------->
+             <div class="col-sm-12">
+                 <div class="btn btn-warning">
+                     <input type="submit" value="OK">
+                 </div>
+             </div>
+         </div>
+
+
+    </div>
+
+    </form>
+    <form action="/search/" method="get">
+        <input type="text" name="query" placeholder="Search by ID" id="query">
+        <input type="submit" value="Search" />
+    </form>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="{% static 'testIOT/design.css' %}" rel="stylesheet">
+</head>
+<body>
+         <div class="container">
+ <!---heading---->
+     <header class="heading"> Patient-Record</header><hr></hr>
+	<!---Form starting---->
+	<div class="row ">
+	 <!--- For Name---->
+        {% if results %}
+         <div class="col-sm-12">
+             <div class="row">
+			     <div class="col-xs-4">
+                     <div class="firstname"><h4>Name :  {{ results.first_name }} {{ results.last_name }}</h4></div> </div>
+		         <!--div class="col-xs-8" class="skewed">
+		             {{ results.first_name }}{{ results.last_name }}
+                 </div-->
+		        </div>
+              </div>
+
+
+     <!-----For email---->
+             <div class="col-sm-12">
+                 <div class="row">
+                     <div class="col-xs-4">
+                         <div class="uniq" ><h4>ID :  {{ results.unique }}</h4></div></div>
+                     <!--div class="col-xs-8"	>
+                          {{ results.unique }}
+                     </div-->
+                 </div>
+             </div>
+	 <!-----For Password and confirm password---->
+          <div class="col-sm-12">
+		         <div class="row">
+				     <div class="col-xs-4">
+		 	              <div class="recommend"><h4>Recommendations: {{ results.recommendations }}</h4>:</div></div>
+                          <!--div class="col-xs-8">
+                                 {{ results.recommendations}}
+                         </div-->
+                      </div>
+                  </div>
+
+
+        {% else %}
+            <h3 class='error'>Please enter a valid ID</h3>
+            <form method="get" action="/search/">
+              <input type="text" name="query" id="query2" placeholder="Search by ID"/>
+              <input type="submit" value="Search" />
+            </form>
+        {% endif %}
+
+     <!-----------For Phone number-------->
+         </div>
+
+
+    </div>
+
+<!--{% if results %}
+    <p>
+        <h3>Name:{{ results.first_name }}{{ results.last_name }}</h3>
+    </p>
+    <p>
+        <h3>ID:{{ results.unique }}</h3>
+    </p>
+    <p>
+        <h3>Recommendations:{{ results.recommendations}}</h3>
+    </p>
+
+
+{% else %}
+    <h3 class='error'>Please enter a valid ID</h3>
+    <form method="get" action="/search/">
+      Search by ID<input type="text" name="query" id="query" placeholder="Search"/>
+      <input type="submit" value="Search" />
+    </form>
+{% endif %}
+-->
+</body>
+</html>
