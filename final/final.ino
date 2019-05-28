@@ -6,7 +6,7 @@
 void setup() {
  
   Serial.begin(9600);                 //Serial connection
-  WiFi.begin("TP-LINK_", "ratna9841929327");   //WiFi connection
+  WiFi.begin("TP-LINK_", "--Password--");   //WiFi connection
  
   while (WiFi.status() != WL_CONNECTED) {  //Wait for the WiFI connection completion
  
