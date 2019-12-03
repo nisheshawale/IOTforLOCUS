@@ -70,7 +70,7 @@
 ### Further Work
 - Later, we used a deep convolutional neural network to classify irregular heartbeats obtained from ECG sensor data.
 - The model architecture was taken from a research paper[1] and trained on our dataset.
-- It was able to classify five different classes of arrhythmias (irregular heartbeat).
+- It was able to classify five different classes of arrhythmias.
 ![model](https://user-images.githubusercontent.com/29419943/70082598-dc64f080-1632-11ea-80c4-4ea1fb5063e1.png)
 #### Confusion matrix
 <img width="401" alt="ConfusionMatrix" src="https://user-images.githubusercontent.com/29419943/70082661-00283680-1633-11ea-833f-b633d7745192.png">
