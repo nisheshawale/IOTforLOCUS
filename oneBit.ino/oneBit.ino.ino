@@ -12,7 +12,7 @@ void setup() {
   Serial.begin(9600);                 //Serial connection
   pinMode(5, INPUT); // Setup for leads off detection LO +
   pinMode(4, INPUT); // Setup for leads off detection LO -
-  WiFi.begin("TP-LINK_", "ratna9841929327");   //WiFi connection
+  WiFi.begin("TP-LINK_", "_");   //WiFi connection
  
   while (WiFi.status() != WL_CONNECTED) {  //Wait for the WiFI connection completion
  
